@@ -1,0 +1,32 @@
+language: csharp
+mono: none
+dotnet: 2.1
+dist: trusty
+
+# Add build var for release.
+env:
+  BUILD_CONFIGURATION=Release
+  NUPKG_DIR="$(pwd)/NuPkg"
+  DEPLOY_DIR="$(pwd)/deploy"
+
+# Install the .NET Core 2.0 runtime as that's what we build and test against
+addons:
+  apt:
+    sources:
+    - sourceline: 'deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main'
+      key_url: 'https://packages.microsoft.com/keys/microsoft.asc'
+    packages:
+    - dotnet-sharedframework-microsoft.netcore.app-1.0.8
+    - dotnet-sharedframework-microsoft.netcore.app-1.1.5
+
+script:
+  - mkdir -p NuPkg    
+  - ./BuildSupport.sh $NUPKG_DIR $DEPLOY_DIR
+#deploy:
+  #skip_cleanup: true
+  #provider: script
+  #script: ./deploy/deploy.sh $TestSettings
+  #on:
+   # branch: master
+  
+  
