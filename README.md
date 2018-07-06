@@ -14,6 +14,7 @@ This client library is designed makes it easy to create Actions for the Google A
 * [Dialogflow Fulfillment Webhook JSON](https://github.com/dialogflow/fulfillment-webhook-json)
 * [Conversation Webhook Format](https://developers.google.com/actions/build/json/conversation-webhook-json)
 * [fulfillment](https://dialogflow.com/docs/fulfillment)
+* [rest](https://dialogflow.com/docs/reference/api-v2/rest/)
 
 ## Planed support for 
 
