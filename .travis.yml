@@ -20,6 +20,7 @@ addons:
     - dotnet-sharedframework-microsoft.netcore.app-1.1.5
 
 script:
+  - chmod +x BuildSupport.sh
   - mkdir -p NuPkg    
   - ./BuildSupport.sh $NUPKG_DIR $DEPLOY_DIR
 #deploy:
