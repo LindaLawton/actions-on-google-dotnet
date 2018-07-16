@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D574ECAF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionsOnGoogle.Core.UnitTests", "..\tests\ActionsOnGoogle.Core.UnitTests\ActionsOnGoogle.Core.UnitTests.csproj", "{28E8A418-5F58-4F44-9CCB-80957F510690}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{550D8710-F717-4E9B-B976-005FCB61B09D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationAPI", "WebApplicationAPI\WebApplicationAPI.csproj", "{5225D237-48C6-4E8C-B1BF-3364A8165398}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{28E8A418-5F58-4F44-9CCB-80957F510690}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28E8A418-5F58-4F44-9CCB-80957F510690}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28E8A418-5F58-4F44-9CCB-80957F510690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5225D237-48C6-4E8C-B1BF-3364A8165398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5225D237-48C6-4E8C-B1BF-3364A8165398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5225D237-48C6-4E8C-B1BF-3364A8165398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5225D237-48C6-4E8C-B1BF-3364A8165398}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D4E9A5E8-2E4A-4BDC-895D-CF67BA3DC7F9} = {CFAFB394-6003-42B2-8336-CDB975F528FA}
 		{28E8A418-5F58-4F44-9CCB-80957F510690} = {D574ECAF-3D3A-40E5-A683-788D8FFA0FE8}
+		{5225D237-48C6-4E8C-B1BF-3364A8165398} = {550D8710-F717-4E9B-B976-005FCB61B09D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3913737B-E927-46E6-88F2-7DB4D0B8799E}
