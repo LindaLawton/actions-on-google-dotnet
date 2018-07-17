@@ -81,62 +81,19 @@ namespace WebApplicationAPI.Controllers
 
         public ContentResult Post([FromBody] FulfillmentRequst data)
         {
-
-            var response = new FulfillmentResponse
+            if (string.IsNullOrEmpty(data.queryResult.action))
             {
-                FulfillmentText = "Hello from C# v2",
+            }
 
-                FulfillmentMessages = new List<FulfillmentMessage>()
-                {
-                    new FulfillmentMessage()
-                    {
-                        card = new Card()
-                        {
-                            title = "card title",
-                            subtitle = "sub title",
-                            imageUri =
-                                "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
-                            buttons = new List<Button>()
-                            {
-                                new Button()
-                                {
-                                    text = "button text",
-                                    postback = "https://assistant.google.com/"
-                                }
-                            }
-                        }
-                    }
-                },
-                Source = "example.com",
-                OutputContexts = new List<OutputContext>()
-                {
-                    new OutputContext
-                    {
-                        name = data.session,
-                        lifespanCount = 5,
-                        parameters = new ActionsOnGoogle.Core.v2.Response.Parameters() {param = "parm value"}
-                    }
-                },
-                Payload = new ActionsOnGoogle.Core.v2.Response.Payload()
-                {
-                    google = new ActionsOnGoogle.Core.v2.Response.Google()
-                    {
-                        expectUserResponse = true,
-                        richResponse = new ActionsOnGoogle.Core.v2.Response.RichResponse()
-                        {
-                            items = new List<ActionsOnGoogle.Core.v2.Response.Item>()
-                            {
-                                new ActionsOnGoogle.Core.v2.Response.Item()
-                                {
-                                    simpleResponse = new ActionsOnGoogle.Core.v2.Response.SimpleResponse() {textToSpeech = "Thi sis a simple response "}
-                                }
-                            }
-                        }
+            // action is on the intent its the actions and paramters (tell.fact) 
 
-                    }}
-                };
 
-            return Content(JsonConvert.SerializeObject(response), "application/json");
+
+
+            if (data.queryResult.queryText.Equals("history", StringComparison.InvariantCultureIgnoreCase))
+                return Content(JsonConvert.SerializeObject(Helpers.Responsebuilder.GetSimpleResponse("Hello history")), "application/json" );
+
+            return Content(JsonConvert.SerializeObject(Helpers.Responsebuilder.GetHelperResponse("Choose a item")), "application/json");
         }
 
 
@@ -225,9 +182,9 @@ namespace WebApplicationAPI.Controllers
                 },
                 FollowupEventInput = new FollowupEventInput()
                 {
-                    name = "event name",
-                    languageCode = "en-Us",
-                    parameters = new Parameters2() { param = "parm value" }
+                    Name = "event name",
+                    //languageCode = "en-Us",
+                    //Parameters = new Parameters() { param = "parm value" }
                 }
             };
 

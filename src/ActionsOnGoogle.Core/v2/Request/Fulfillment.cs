@@ -20,6 +20,7 @@ namespace ActionsOnGoogle.Core.v2.Request
     {
         [JsonProperty("category.original")]
         public string categoryoriginal { get; set; }
+        [JsonProperty("category")]
         public string category { get; set; }
     }
 

@@ -12,6 +12,7 @@ namespace ActionsOnGoogle.Core.v2.Response
 
         public class Payload
         {
+            [JsonProperty("google")]
             public Google google { get; set; }
 
             public class Google
