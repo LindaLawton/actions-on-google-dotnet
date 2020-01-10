@@ -12,7 +12,7 @@ namespace ActionsOnGoogle.Core.v2.Request
         public string Action { get; set; }
             
         [JsonProperty("parameters", NullValueHandling = NullValueHandling.Ignore)] 
-        public Parameters Parameters { get; set; }
+        public object Parameters { get; set; }
             
         [JsonProperty("allRequiredParamsPresent", NullValueHandling = NullValueHandling.Ignore)] 
         public bool AllRequiredParamsPresent { get; set; }
