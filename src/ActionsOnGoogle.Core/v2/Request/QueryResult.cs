@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ActionsOnGoogle.Core.v2.Request
 {
@@ -12,7 +13,7 @@ namespace ActionsOnGoogle.Core.v2.Request
         public string Action { get; set; }
             
         [JsonProperty("parameters", NullValueHandling = NullValueHandling.Ignore)] 
-        public object Parameters { get; set; }
+        public JObject Parameters { get; set; }
             
         [JsonProperty("allRequiredParamsPresent", NullValueHandling = NullValueHandling.Ignore)] 
         public bool AllRequiredParamsPresent { get; set; }

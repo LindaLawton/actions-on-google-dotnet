@@ -3,8 +3,6 @@
 
 # Actions on Google .Net Client Libray
 
-
-
 This client library is designed makes it easy to create Actions for the Google Assistant with .Net
 
 These are useful links i have used to attempt to create this libary.
@@ -15,6 +13,17 @@ These are useful links i have used to attempt to create this libary.
 * [fulfillment](https://dialogflow.com/docs/fulfillment)
 * [rest](https://dialogflow.com/docs/reference/api-v2/rest/)
 * [Migration guyde](https://dialogflow.com/docs/reference/v1-v2-migration-guide)
+
+
+# Testing locally
+
+Recomend using Ngrok
+
+>ngrok http https://localhost:5001 -host-header="localhost:5001"
+
+To test time intent with Google Maps intergration create a Google api key and add it as a user secret dont upload it to a repo.
+
+>dotnet user-secrets set "GoogleApis:ApiKey" "Your API KEY"
 
 ## Planed support for 
 

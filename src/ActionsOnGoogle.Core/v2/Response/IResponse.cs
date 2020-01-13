@@ -43,7 +43,7 @@ namespace ActionsOnGoogle.Core.v2.Response
     "queryResult": {
         "queryText": "what time is it",
         "parameters": {
-            "geo-city": ""
+            "geo-city": "New York"
         },
         "allRequiredParamsPresent": true,
         "fulfillmentText": "ok",

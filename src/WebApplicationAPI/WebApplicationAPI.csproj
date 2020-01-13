@@ -1,19 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>cdadd08f-23e5-4193-b09c-eb56aa51a0f5</UserSecretsId>
   </PropertyGroup>
-
   <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\ActionsOnGoogle.Core\ActionsOnGoogle.Core.csproj" />
   </ItemGroup>
-
 </Project>
